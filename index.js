@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 const portno = require("minimist")(process.argv.slice(2));
-console.log("now listening to port: " ,port);
+console.log("now listening to port: " ,portno);
 let homeContent = "";
 let projectContent = "";
 let registrationContent="";
