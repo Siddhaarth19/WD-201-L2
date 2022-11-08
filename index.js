@@ -1,9 +1,10 @@
 const http = require("http");
 const fs = require("fs");
-
+const portno = require("minimist")(process.argv.slice(2));
+console.log("now listening to port: " ,port);
 let homeContent = "";
 let projectContent = "";
-let registrationContent;
+let registrationContent="";
 
 fs.readFile("home.html", (err, home) => {
   if (err) {
@@ -45,4 +46,4 @@ http
         break;
     }
   })
-  .listen(5000);
+  .listen(portno);
